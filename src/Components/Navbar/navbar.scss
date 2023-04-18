@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  padding: 15px 60px;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(250.16deg, #193549 -4.31%, #148B7C 79.06%);
+
+  img {
+    object-fit: cover;
+    opacity: 1;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+align-items: center;
+    li, a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Outfit', sans-serif;
+      color: white;
+    }
+    button{
+      background: #FFFFFF;
+      border: 1px solid #00C170;
+      border-radius: 800px;
+      height: 42px;
+      width: 175px;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Outfit', sans-serif;
+      line-height: 23px;
+      color: #166263;
+    }
+  }
+}
