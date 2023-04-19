@@ -1,7 +1,7 @@
 
 import "./navbar.scss";
 import Rectangle from "../../Assets/Rectangle.png"
-export const Navbar = () => {
+export default function Navbar (){
     return <nav className={"navbar"}>
         <img src={Rectangle} alt={"logo"}/>
         <ul>

@@ -1,11 +1,49 @@
-.caro-text{
-max-width: 1050px;
+.carousel-caption-center {
+
   font-family: 'Outfit', sans-serif;
-  h1{
-    font-size: 64px;
-    color: #00C170!important;
+
+  h1 {
+    font-size: 48px;
+    color: white !important;
+    text-align: center !important;
+    font-weight: 700;
+    //font-family: 'Outfit', sans-serif;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #F8F9FA!important;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background: #FFFFFF;
+    border: 1px solid #00C170;
+    border-radius: 20px;
+    height: 48px;
+    width: 200px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    line-height: 23px;
+    color: #166263;
   }
 }
-.button{
-  padding: 20px;
+.dots{
+bottom: -60px!important;
+position: absolute;
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+  .dot{
+    height: 20px;
+    width: 20px;
+    background: rgba(4, 188, 126, 0.5);
+
+  }
+  .active{
+    background: #04BB88;
+  }
 }

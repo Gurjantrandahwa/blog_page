@@ -10,41 +10,38 @@ export default function HeroSection() {
     const data = [
         {
             image: caro1,
-            caption: `<div className={"caro-text"}>
+            caption: `
                 <h1>Tech Meets Agriculture</h1>
-                <p>The fusion of technology and agriculture is creating new possibilities for precision farming,
+                <p>The fusion of technology and agriculture is creating new possibilities for<br/> precision farming,
                     automation, and data-driven decision making</p>
                 <button>Read more</button>
-            </div>`
+            `
         },
         {
             image: caro2,
-            caption:` <div className={"caro-text"}>
+            caption: `
                 <h1>Ouranos helping farmer grow</h1>
-                <p>The fusion of technology and agriculture is creating new possibilities for precision farming,
+                <p>The fusion of technology and agriculture is creating new possibilities for <br/> precision farming,
                     automation, and data-driven decision making
                 </p>
                 <button>Read more</button>
-            </div>`
+           `
         },
         {
             image: caro3,
             caption:
 
-
-          `      <div className={"caro-text"}>
-                    <h1>Know your crop</h1>
-                    <p>The fusion of technology and agriculture is creating new possibilities for precision farming,
+                `      
+                    <h1 style={{color:"#252525"}}>Know your crop</h1>
+                    <p>The fusion of technology and agriculture is creating new possibilities for <br/> precision farming,
                         automation, and data-driven decision making
                     </p>
                     <button className="button">Read more</button>
-                </div>`
+                `
         },
 
     ];
-    const captionStyle = {
-
-    }
+    const captionStyle = {}
 
     return <div>
 
@@ -52,7 +49,7 @@ export default function HeroSection() {
             data={data}
             time={5000}
             width="1918px"
-            height="870px"
+            height="670px"
             captionPosition="center"
             automatic={true}
             dots={true}
@@ -61,7 +58,7 @@ export default function HeroSection() {
             style={{
                 textAlign: "center",
                 maxWidth: "1918px",
-                maxHeight: "870px",
+                maxHeight: "670px",
                 margin: "auto"
             }}
         />
