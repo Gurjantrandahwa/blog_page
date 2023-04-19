@@ -49,7 +49,7 @@ export default function HeroSection() {
             data={data}
             time={5000}
             width="1918px"
-            height="670px"
+            height="870px"
             captionPosition="center"
             automatic={true}
             dots={true}
