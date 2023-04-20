@@ -12,7 +12,7 @@ export default function HeroSection() {
             image: caro1,
             caption: `
                 <h1>Tech Meets Agriculture</h1>
-                <p>The fusion of technology and agriculture is creating new possibilities for<br/> precision farming,
+                <p>The fusion of technology and agriculture is creating new possibilities for precision farming,
                     automation, and data-driven decision making</p>
                 <button>Read more</button>
             `
@@ -21,7 +21,7 @@ export default function HeroSection() {
             image: caro2,
             caption: `
                 <h1>Ouranos helping farmer grow</h1>
-                <p>The fusion of technology and agriculture is creating new possibilities for <br/> precision farming,
+                <p>The fusion of technology and agriculture is creating new possibilities for precision farming,
                     automation, and data-driven decision making
                 </p>
                 <button>Read more</button>
@@ -33,7 +33,7 @@ export default function HeroSection() {
 
                 `      
                     <h1 style={{color:"#252525"}}>Know your crop</h1>
-                    <p>The fusion of technology and agriculture is creating new possibilities for <br/> precision farming,
+                    <p>The fusion of technology and agriculture is creating new possibilities for  precision farming,
                         automation, and data-driven decision making
                     </p>
                     <button className="button">Read more</button>
@@ -43,7 +43,7 @@ export default function HeroSection() {
     ];
     const captionStyle = {}
 
-    return <div>
+    return <div id={"home"}>
 
         <Carousel
             data={data}

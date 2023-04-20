@@ -1,20 +1,61 @@
+
 .navbar {
-  display: flex;
-  padding: 15px 60px;
-  justify-content: space-between;
-  align-items: center;
   background: linear-gradient(250.16deg, #193549 -4.31%, #148B7C 79.06%);
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 60px;
 
   img {
+    height: 49px;
     object-fit: cover;
     opacity: 1;
+    width: 150px;
+    @media (max-width: 868px) {
+      height: 38px;
+      width: 100px;
+    }
+  }
+  .icon{
+    display: none!important;
+
+    @media (max-width: 868px) {
+      display: block!important;
+    }
+  }
+  .MuiToolbar-root {
+    justify-content: space-between;
+  }
+
+
+  .MuiDrawer-paper {
+    background-color: #148b7c;
+    color: white;
+    width: 250px;
+  }
+
+  .MuiListItem-root {
+    padding: 20px;
+
+    &:hover {
+      background-color: #00c170;
+    }
+  }
+
+  .MuiListItemText-root {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
   }
 
   ul {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
+
+    @media (max-width: 868px) {
+      display: none;
+    }
 
     li, a {
       text-decoration: none;
@@ -25,8 +66,8 @@
     }
 
     button {
-      background: #FFFFFF;
-      border: 1px solid #00C170;
+      background: #FFFFFF !important;
+      border: 1px solid #00C170 !important;
       border-radius: 800px;
       height: 42px;
       width: 175px;
@@ -35,6 +76,52 @@
       font-family: 'Outfit', sans-serif;
       line-height: 23px;
       color: #166263;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+}
+
+.drawer {
+  background: linear-gradient(250.16deg, #193549 -4.31%, #148B7C 79.06%) !important;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 250px;
+img{
+  width: 120px;
+  margin-left: 35px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+  span {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    margin-left: 60px !important;
+  }
+  button {
+    background: #FFFFFF !important;
+    border: 1px solid #00C170 !important;
+    border-radius: 800px;
+    height: 35px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    line-height: 23px;
+    color: #166263;
+margin-left: 30px;
+    margin-top: 10px;
+    &:hover {
+      color: white;
     }
   }
 }

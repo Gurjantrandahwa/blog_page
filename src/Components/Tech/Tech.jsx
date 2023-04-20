@@ -5,8 +5,8 @@ import icon3 from "../../Assets/Icons/icon3.png"
 import icon4 from "../../Assets/Icons/cyborg.png"
 
 export default function Tech() {
-    return <div className={"tech-container"}>
-        <h1>What would You like to read today?</h1>
+    return <div className={"tech-container"} id={"about"}>
+        <h1 data-aos={"fade-up"} data-aos-duration={"1500"}>What would You like to read today?</h1>
         <div className={"tech-wrapper"}>
             {
                 [
@@ -33,7 +33,7 @@ export default function Tech() {
                 ]
 
                     .map((tech, index) => {
-                        return <div key={index} className={index===1?'tech-card-2':`tech-card`}>
+                        return <div key={index} className={index===1?'tech-card-2':`tech-card`} data-aos={"fade-up"} data-aos-duration={"2000"}>
                             <img src={tech.icon} alt={"icon"}/>
                             <h2>{tech.header}</h2>
                             <p>{tech.description}</p>

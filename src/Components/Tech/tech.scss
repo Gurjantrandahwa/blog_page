@@ -1,7 +1,10 @@
 
 .tech-container {
   margin-top: 320px;
+  @media (max-width: 450px) {
+  margin-top: 120px;
 
+  }
   h1 {
     font-family: Arial, "sans-serif";
     text-align: center;
