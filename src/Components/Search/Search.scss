@@ -1,0 +1,29 @@
+
+.search-container{
+  max-width: 370px;
+  .search-wrapper {
+
+
+    label {
+      font-size: 20px !important;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    input {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    svg {
+      font-size: 25px !important;
+    }
+
+    .css-wb57ya-MuiFormControl-root-MuiTextField-root {
+      background: white !important;
+      box-shadow: 10px 10px 100px 20px rgba(0, 0, 0, 0.1) !important;
+      border-radius: 10px !important;
+      height: 53px !important;
+    }
+  }
+}
+
+

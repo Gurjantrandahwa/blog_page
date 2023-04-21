@@ -58,7 +58,7 @@ export default function Navbar() {
 
                 </li>
                 <li onClick={handleDrawerClose}>
-                    <Button >Buy now</Button>
+                    <Button>Buy now</Button>
                 </li>
             </ul>
             <Drawer anchor="left" open={openDrawer} onClose={handleDrawerClose}>
@@ -85,7 +85,7 @@ export default function Navbar() {
                         <ListItemText primary="Contact Me"/>
                     </ListItem>
                     <ListItem button onClick={handleDrawerClose}>
-                        <Button >
+                        <Button variant={"outlined"}>
                             Buy now
                         </Button>
 
