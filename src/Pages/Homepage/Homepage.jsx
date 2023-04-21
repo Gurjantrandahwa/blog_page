@@ -17,7 +17,7 @@ export default function Homepage() {
             let filteredBlogs = blogs.filter(blog =>
                 blog.title.toLowerCase().includes(search.toLowerCase().trim()) ||
                 blog.description.toLowerCase().includes(search.toLowerCase().trim())
-            )||[]
+            )
 
             setBlogs(filteredBlogs)
 
