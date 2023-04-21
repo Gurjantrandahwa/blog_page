@@ -1,5 +1,5 @@
 import './App.scss';
-import {Homepage} from "./Pages/Homepage/Homepage";
+import Homepage from "./Pages/Homepage/Homepage";
 
 
 function App() {
