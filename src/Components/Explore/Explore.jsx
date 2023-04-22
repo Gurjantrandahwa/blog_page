@@ -138,7 +138,7 @@ export default function Explore() {
                         <h2>{value.header}</h2>
                         <p>
                             {value.description}
-                            <span className={"read-btn"}> Read more</span>
+                            <span className={"read-btn"}>Read more</span>
                         </p>
 
                     </div>
@@ -149,17 +149,12 @@ export default function Explore() {
         <Stack spacing={2}>
 
             <Pagination
+                hidePrevButton
                 count={Math.ceil(data.length/itemsPerPage)}
-                className={"pagination"}  page={page}
+                className={"pagination"}
+                page={page}
                 onChange={handleChange}
-                sx={{
-                    '& .Mui-selected': {
-                        backgroundColor: '#11C67A',
-                        '&:hover': {
-                            backgroundColor: '#11C67A',
-                        },
-                    },
-                }}
+
             />
         </Stack>
 

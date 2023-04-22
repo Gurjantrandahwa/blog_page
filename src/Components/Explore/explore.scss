@@ -79,12 +79,15 @@
       width: 41px;
       height: 41px;
       border-radius: 50%;
-      color: rgba(20, 20, 20, 0.71) !important;
+      color: rgba(47, 45, 45, 0.71) !important;
     }
+  }
+
+  .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root {
+    background-color: #F0F0F0;
   }
 
   .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
     background-color: #11C67A !important;
-
   }
 }
