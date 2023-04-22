@@ -1,7 +1,7 @@
 import React from "react";
 
 function EmptyList() {
-    return <div className={"empty-list"}>
+    return <div>
         <h1>No result found!</h1>
     </div>
 }

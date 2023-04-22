@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
 import db from '../../Common/firebase';
 import {TextareaAutosize, TextField} from "@mui/material";
 
@@ -18,7 +17,6 @@ const AddBlog = () => {
         const id = blogRef.id;
         await blogRef.set({
             id: id,
-            timestamp: new Date(),
             image:image,
             type:type,
             title: title,

@@ -2,13 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  position: relative;
 
-  .add-blog-btn {
-    position: absolute;
-    right: 30px;
-    top: -50px;
-  }
+
 
   a {
     text-decoration: none;

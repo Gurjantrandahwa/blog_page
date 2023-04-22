@@ -1,11 +1,14 @@
 import React from "react";
 import "./Search.scss";
-import {Divider,
-     IconButton,
+import {
+    Button, Divider,
+    IconButton,
     InputAdornment,
 
-    TextField} from "@mui/material";
+    TextField
+} from "@mui/material";
  import SearchIcon from '@mui/icons-material/Search';
+import {Link} from "react-router-dom";
 
 export default function Search({value, category_value, handleSearch, setCategoryTypes}) {
     return <div className={"search-container"}>
@@ -87,5 +90,14 @@ export default function Search({value, category_value, handleSearch, setCategory
                 })
             }
         </div>
+        <Link to={"/addBlog"}>
+            <Button
+                variant={"contained"}
+                color={"success"}
+                className={"add-blog-btn"}
+            >
+                Add Blog
+            </Button>
+        </Link>
     </div>
 }

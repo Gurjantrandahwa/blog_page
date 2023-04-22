@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import AddBlog from "./Components/AddBlog/AddBlog";
 
 function App() {
-    return <div>
+    return <div className={"app"}>
         <Router>
             <Routes>
                 <Route

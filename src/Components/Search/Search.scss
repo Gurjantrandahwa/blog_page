@@ -1,6 +1,7 @@
 
 .search-container {
   max-width: 380px;
+  position: relative;
 
   .search-wrapper {
     height: 53px;
@@ -62,7 +63,7 @@
     }
   }
 
-  .posts{
+  .posts {
     max-width: 380px;
     background: #FFFFFF;
     box-shadow: 15px 15px 100px -30px rgba(0, 0, 0, 0.1);
@@ -74,6 +75,7 @@
     align-items: flex-start;
     padding: 20px;
     gap: 20px;
+
     h2 {
       font-weight: 700;
       font-size: 28px;
@@ -81,33 +83,44 @@
       line-height: 37px;
       font-family: "Roboto Slab", sans-serif;
     }
-.post-text{
-  font-family: 'Outfit', sans-serif;
-  display: flex;
-  gap: 20px;
-  h1{
-    color: #212529;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 45px;
-    letter-spacing: 0.2px;
-  }
-  h4{
-    color: #212529;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-    margin-bottom: 5px;
-  }
-p{
-  color: rgba(33, 37, 41, 0.5);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-}
 
-}
+    .post-text {
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      gap: 20px;
+
+      h1 {
+        color: #212529;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 45px;
+        letter-spacing: 0.2px;
+      }
+
+      h4 {
+        color: #212529;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+        margin-bottom: 5px;
+      }
+
+      p {
+        color: rgba(33, 37, 41, 0.5);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+    }
+  }
+
+
+  .add-blog-btn {
+    position: absolute;
+    right: -790px;
+    top: -50px;
   }
 }
 
