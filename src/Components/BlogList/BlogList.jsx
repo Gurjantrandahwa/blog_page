@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./blogList.scss"
+import "./BlogList";
 import {Button, Pagination} from "@mui/material";
 import {Link} from "react-router-dom";
 
