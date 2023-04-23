@@ -20,4 +20,44 @@
     cursor: pointer;
   }
 
+  .comments {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .comment-header {
+      font-family: 'Outfit', sans-serif;
+
+      h2 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+
+        color: #212529;
+      }
+
+      p {
+        font-size: 15px;
+        color: #32393c;
+        line-height: 26px;
+      }
+    }
+
+    .comment-body {
+      p {
+        color: rgba(33, 37, 41, 0.5);
+        font-size: 16px;
+        line-height: 20px;
+
+      }
+    }
+  }
+
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-left: 5px;
+  text-transform: capitalize;
 }

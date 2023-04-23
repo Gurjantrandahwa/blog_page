@@ -1,0 +1,31 @@
+.add-blog-wrapper{
+  background: linear-gradient(250.16deg, #193549 -4.31%, #148B7C 79.06%);
+
+ form{
+    display: flex!important;
+    flex-direction: column;
+    gap: 16px;
+    margin: 24px auto;
+    max-width: 500px;
+  }
+
+  button{
+    margin-top: 16px;
+    align-self: flex-start;
+    background: #FFFFFF !important;
+    border: 1px solid #00C170 !important;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    color: #166263;
+padding: 5px 25px!important;
+    &:hover {
+      color: #00C170 !important;
+
+    }
+  }
+  .error-m{
+    color: red!important;
+  }
+}

@@ -2,17 +2,17 @@ import React, {useEffect, useState} from "react";
 import {Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField} from "@mui/material";
 import "./AddComment.scss";
 import db from "../../Common/firebase";
-import {Formik} from "formik";
-import * as Yup from 'yup';
+
 
 export default function AddComment() {
     const [open, setOpen] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [submit, setSubmit] = useState('')
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
-
+    const [nameError, setNameError] = useState("");
+    const [emailError, setEmailError] = useState("");
+    const [commentError, setCommentError] = useState("");
     useEffect(() => {
         db.collection('comments').onSnapshot(snapshot => {
             let temp_comment = snapshot.docs.map((doc => doc.data()));
@@ -22,11 +22,30 @@ export default function AddComment() {
 
     const handleClickOpen = () => {
         setOpen(true);
+        setNameError("")
+        setEmailError("")
+        setCommentError("")
     };
     const handleClickClose = () => {
         setOpen(false);
+        setNameError("")
+        setEmailError("")
+        setCommentError("")
     }
-    const handleCommentSubmit = () => {
+    const handleCommentSubmit = (e) => {
+        e.preventDefault();
+        if (!name) {
+            setNameError("Please enter your name");
+            return;
+        }
+        if (!email) {
+            setEmailError("Please enter your email");
+            return;
+        }
+        if (!comment) {
+            setCommentError("Please enter your comment");
+            return;
+        }
         db.collection('comments').add({
             name: name,
             email: email,
@@ -49,49 +68,55 @@ export default function AddComment() {
             <div onClick={handleClickOpen} className={"comment-dialog"}>
                 Write Comment
             </div>
-            <div className={"comments-container"}>
-
-                {comments.map((comment) => (
-                    <div key={comment.id} className={"comment"}>
+            <div className={"comments"}>
+                {comments.map((comment,index) => (
+                    <div key={index}>
                         <div className={"comment-header"}>
-                            <h2>{comment.name}</h2> {comment.email}
+                            <h2>{comment.name}</h2>
+                            <p>{comment.email}</p>
                         </div>
-                        <div className={"comment-body"}>{comment.comment}</div>
+                        <div className={"comment-body"}>
+                            <p> {comment.comment}</p>
+
+                        </div>
                     </div>
                 ))}
             </div>
+
 
         </div>
         <Dialog open={open} onClose={handleClickClose}>
             <DialogTitle color={"darkgreen"}>Write Comment</DialogTitle>
             <DialogContent>
 
-                <form >
-                    <div style={{display: "flex"}}>
-                        <TextField
-                            sx={{marginRight: 5}}
-                            margin="dense"
-                            label="Name"
-                            type="text"
-                            fullWidth
-                            variant="outlined"
-                            color={"success"}
-                            value={name}
-                            onChange={e => setName(e.target.value)}
+                <form>
+                    <TextField
+                        margin="dense"
+                        label="Name"
+                        type="text"
+                        fullWidth
+                        variant="outlined"
+                        color={"success"}
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                    />
 
-                        />
-                        <TextField
-                            margin="dense"
-                            label="Email"
-                            type="email"
-                            fullWidth
-                            variant="outlined"
-                            color={"success"}
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
+                    {nameError && <p className="error">{nameError}</p>}
 
-                        />
-                    </div>
+
+                    <TextField
+                        margin="dense"
+                        label="Email"
+                        type="email"
+                        fullWidth
+                        variant="outlined"
+                        color={"success"}
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                    />
+
+                    {emailError && <p className="error">{emailError}</p>}
+
                     <TextField
                         margin="dense"
                         label="Write Comment"
@@ -100,10 +125,9 @@ export default function AddComment() {
                         variant="outlined"
                         color={"success"}
                         value={comment}
-                        required
                         onChange={e => setComment(e.target.value)}
-
                     />
+                    {commentError && <p className="error">{commentError}</p>}
                 </form>
             </DialogContent>
             <DialogActions>

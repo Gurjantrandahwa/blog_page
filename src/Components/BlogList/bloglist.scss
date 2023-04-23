@@ -1,13 +1,28 @@
+.add-blog-btn {
+  display: flex !important;
+  justify-content: start !important;
+  margin-bottom: 10px;
+  @media (max-width: 868px) {
+    margin: 10px auto !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
 .blog-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-
-
-
-  a {
-    text-decoration: none;
+  position: relative;
+  @media (max-width: 868px) {
+    display: flex;
+    flex-direction: column;
   }
+
 
   .blog-card {
     width: 380px;

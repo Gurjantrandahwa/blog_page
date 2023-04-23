@@ -1,16 +1,26 @@
-.app{
+.app {
   max-width: 1300px;
   margin: auto;
+  overflow-x: hidden;
 
-  button{
+  button {
     text-transform: none;
   }
 }
 
-.blog-container{
+.blog-container {
   margin: 0 45px;
   display: flex;
   gap: 15px;
-//flex-wrap: wrap;
+
+
+  @media (max-width: 950px) {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
 
 }
