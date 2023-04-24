@@ -26,7 +26,7 @@ export default function BlogList({blogs}) {
 
             {
                 currentItems && currentItems.map(blog => {
-                    return <div key={blog.id} className={"blog-card"}>
+                    return <div key={blog.id} className={"blog-card"} data-aos={"fade-left"} data-aos-duration={"1800"}>
                         <Link to={`/blog/${blog.id}`}>
                             <img src={blog.image} alt={"blogs"}/>
                             <div className={"blog-text"}>

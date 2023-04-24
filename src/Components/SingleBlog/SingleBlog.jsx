@@ -32,7 +32,7 @@ const SingleBlog = () => {
 
 
     return <div className="single-blog-container">
-        <div className={"icon-wrapper"}>
+        <div className={"icon-wrapper"} data-aos={"fade-up"} data-aos-duration={"1800"}>
             <div>
                 <IconButton onClick={handleGoBack}>
                     <KeyboardBackspace/>
@@ -61,11 +61,11 @@ const SingleBlog = () => {
             </div>
         </div>
         <div className={"single-blog"}>
-            <img src={blog.image} alt={""}/>
-            <h1>{blog.title}</h1>
+            <img src={blog.image} alt={""} data-aos={"fade-up"} data-aos-duration={"2000"}/>
+            <h1 data-aos={"fade-up"} data-aos-duration={"2200"}>{blog.title}</h1>
             <p className={"type"}>{blog.type}</p>
             {/*<p>{blog.description}</p>*/}
-            <>
+            <div data-aos={"fade-up"} data-aos-duration={"2400"}>
                 <p style={{marginTop: 30}}>
                     Organic farming is a method of agriculture that avoids the use of synthetic fertilizers, pesticides,
                     and other harmful chemicals. Instead, it relies on natural methods of pest control and soil
@@ -126,7 +126,7 @@ const SingleBlog = () => {
                     build a more sustainable and equitable food system that promotes health, wellness, and environmental
                     stewardship.</p>
 
-            </>
+            </div>
         </div>
         {/*Comments*/}
         <AddComment/>

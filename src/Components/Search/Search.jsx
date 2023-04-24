@@ -10,8 +10,8 @@ import SearchIcon from '@mui/icons-material/Search';
 
 
 export default function Search({value, handleSearch}) {
-    return <div className={"search-container"}>
-        <div className={"search-wrapper"}>
+    return <div className={"search-container"} data-aos={"fade-right"} data-aos-duration={"1800"}>
+        <div className={"search-wrapper"} >
             <TextField
                 variant={"outlined"}
                 fullWidth

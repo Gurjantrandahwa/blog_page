@@ -58,9 +58,9 @@ const AddBlog = () => {
                 <KeyboardBackspace/>
             </IconButton>
         </div>
-        <h1>Add Blog</h1>
+        <h1 data-aos={"fade-up"} data-aos-duration={"1500"}>Add Blog</h1>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} data-aos={"fade-up"} data-aos-duration={"1800"}>
             <div>
                 <TextField
                     fullWidth

@@ -63,7 +63,7 @@ export default function AddComment() {
             });
     };
     return <div>
-        <div className={"comments-container"}>
+        <div className={"comments-container"} data-aos={"fade-up"} data-aos-duration={"2500"}>
             <h2>Comments</h2>
             <div onClick={handleClickOpen} className={"comment-dialog"}>
                 Write Comment
