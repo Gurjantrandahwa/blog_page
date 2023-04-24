@@ -11,22 +11,12 @@ export default function BlogList({blogs}) {
     const itemsPerPage = 4;
     const startIndex = (page - 1) * itemsPerPage;
     const currentItems = blogs.slice(startIndex, startIndex + itemsPerPage);
-    useEffect(() => {
-        const handleClick = () => {
-            window.scrollBy({
-                top: -window.innerHeight,
-                behavior: 'smooth'
-            });
-        };
-        document.addEventListener('click', handleClick);
-        return () => document.removeEventListener('click', handleClick);
-    }, []);
+
     return <div>
         <Link to={"/addBlog"} className={"add-blog-btn"} id={"blog"}>
             <Button
                 variant={"contained"}
                 color={"success"}
-
             >
                 Add Blog
             </Button>
