@@ -21,6 +21,16 @@ export default function Explore() {
         Aos.init({duration: 2000})
 
     }, [])
+    useEffect(() => {
+        const handleClick = () => {
+            window.scrollBy({
+                top: -window.innerHeight,
+                behavior: 'smooth'
+            });
+        };
+        document.addEventListener('click', handleClick);
+        return () => document.removeEventListener('click', handleClick);
+    }, []);
     const data = [
         {
             img: explore1,
