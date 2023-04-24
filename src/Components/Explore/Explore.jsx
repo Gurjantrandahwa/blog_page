@@ -22,15 +22,8 @@ export default function Explore() {
 
     }, [])
     useEffect(() => {
-        const handleClick = () => {
-            window.scrollBy({
-                top: -window.innerHeight,
-                behavior: 'smooth'
-            });
-        };
-        document.addEventListener('click', handleClick);
-        return () => document.removeEventListener('click', handleClick);
-    }, []);
+        window.scrollTo({ top: 1300, behavior: "smooth" });
+    }, [page]);
     const data = [
         {
             img: explore1,

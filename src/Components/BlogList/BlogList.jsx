@@ -11,7 +11,9 @@ export default function BlogList({blogs}) {
     const itemsPerPage = 4;
     const startIndex = (page - 1) * itemsPerPage;
     const currentItems = blogs.slice(startIndex, startIndex + itemsPerPage);
-
+    useEffect(() => {
+        window.scrollTo({ top: 2300, behavior: "smooth" });
+    }, [page]);
     return <div>
         <Link to={"/addBlog"} className={"add-blog-btn"} id={"blog"}>
             <Button
