@@ -54,11 +54,11 @@ export default function Navbar() {
                     <a href={"#blog"}>Blog</a>
                 </li>
                 <li onClick={handleDrawerClose}>
-                    <a href={"#contact"}>Contact Me</a>
+                    <a href={"#home"}>Contact Me</a>
 
                 </li>
                 <li onClick={handleDrawerClose}>
-                    <Button>Buy now</Button>
+                    <a href={"#home"}> <Button>Buy now</Button></a>
                 </li>
             </ul>
             <Drawer anchor="left" open={openDrawer} onClose={handleDrawerClose}>
@@ -70,24 +70,40 @@ export default function Navbar() {
                         />
                     </ListItem>
                     <ListItem button onClick={handleDrawerClose}>
-                        <ListItemText primary="Home"/>
+                        <a href={"#home"}>
+                            <ListItemText primary="Home"/>
+                        </a>
+
                     </ListItem>
                     <ListItem button onClick={handleDrawerClose}>
+                        <a href={"#about"}>
                         <ListItemText primary="About Me"/>
+                        </a>
                     </ListItem>
                     <ListItem button onClick={handleDrawerClose}>
-                        <ListItemText primary="Category"/>
+                        <a href={"#category"}>
+                            <ListItemText primary="Category"/>
+                        </a>
+
                     </ListItem>
                     <ListItem button onClick={handleDrawerClose}>
-                        <ListItemText primary="Blog"/>
+                        <a href={"#blog"}>
+                            <ListItemText primary="Blog"/>
+                        </a>
+
                     </ListItem>
                     <ListItem button onClick={handleDrawerClose}>
+                        <a href={"#home"}>
                         <ListItemText primary="Contact Me"/>
+                        </a>
                     </ListItem>
                     <ListItem button onClick={handleDrawerClose}>
-                        <Button variant={"outlined"}>
-                            Buy now
-                        </Button>
+                        <a href={"#home"}>
+                            <Button variant={"outlined"}>
+                                Buy now
+                            </Button>
+                        </a>
+
 
                     </ListItem>
                 </List>

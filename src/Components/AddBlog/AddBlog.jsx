@@ -2,7 +2,9 @@ import {useNavigate} from 'react-router-dom';
 import {Button, TextField} from "@mui/material";
 import db from '../../Common/firebase';
 import "./AddBlog.scss";
-import {useState} from "react";
+import React, {useState} from "react";
+import IconButton from "@mui/material/IconButton";
+import {KeyboardBackspace} from "@mui/icons-material";
 
 const AddBlog = () => {
     const [image, setImage] = useState('');
@@ -47,12 +49,23 @@ const AddBlog = () => {
         navigate("/")
     };
 
+    const handleGoBack = () => {
+        navigate(-1);
+    };
     return <div className={"add-blog-wrapper"}>
+        <div className={"back-btn"}>
+            <IconButton onClick={handleGoBack}>
+                <KeyboardBackspace/>
+            </IconButton>
+        </div>
         <h1>Add Blog</h1>
+
         <form onSubmit={handleSubmit}>
             <div>
                 <TextField
                     fullWidth
+                    variant={"outlined"}
+                    color={"secondary"}
                     label={"Image"}
                     type="url"
                     value={image}
@@ -63,12 +76,15 @@ const AddBlog = () => {
                     required
                     error={Boolean(imageError)}
                     helperText={imageError}
+
                 />
             </div>
             <div>
 
                 <TextField
                     fullWidth
+                    variant={"outlined"}
+                    color={"secondary"}
                     label={"Type"}
                     type="text"
                     value={type}
@@ -85,6 +101,8 @@ const AddBlog = () => {
 
                 <TextField
                     fullWidth
+                    variant={"outlined"}
+                    color={"secondary"}
                     label={"Title"}
                     type="text"
                     value={title}
@@ -100,6 +118,8 @@ const AddBlog = () => {
             <div>
                 <TextField
                     fullWidth
+                    variant={"outlined"}
+                    color={"secondary"}
                     multiline
                     rows={5}
                     label={"Description"}

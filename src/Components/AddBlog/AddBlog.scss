@@ -1,15 +1,34 @@
-.add-blog-wrapper{
+.add-blog-wrapper {
   background: linear-gradient(250.16deg, #193549 -4.31%, #148B7C 79.06%);
+  height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  width: 100%;
 
- form{
-    display: flex!important;
+  .back-btn {
+    padding: 20px;
+  }
+
+  h1 {
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  form {
+    display: flex !important;
     flex-direction: column;
+    justify-content: center;
     gap: 16px;
     margin: 24px auto;
     max-width: 500px;
+    padding: 0 20px;
   }
 
-  button{
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    color: #FFFFFF !important;
+  }
+
+  button {
     margin-top: 16px;
     align-self: flex-start;
     background: #FFFFFF !important;
@@ -19,13 +38,15 @@
     font-weight: 600;
     font-family: 'Outfit', sans-serif;
     color: #166263;
-padding: 5px 25px!important;
+    padding: 5px 25px !important;
+
     &:hover {
       color: #00C170 !important;
 
     }
   }
-  .error-m{
-    color: red!important;
+
+  .error-m {
+    color: red !important;
   }
 }

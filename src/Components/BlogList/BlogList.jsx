@@ -12,8 +12,8 @@ export default function BlogList({blogs}) {
     const startIndex = (page - 1) * itemsPerPage;
     const currentItems = blogs.slice(startIndex, startIndex + itemsPerPage);
 
-    return<div>
-        <Link to={"/addBlog"}               className={"add-blog-btn"}>
+    return <div>
+        <Link to={"/addBlog"} className={"add-blog-btn"} id={"blog"}>
             <Button
                 variant={"contained"}
                 color={"success"}
